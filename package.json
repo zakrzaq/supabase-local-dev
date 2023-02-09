@@ -1,0 +1,22 @@
+{
+  "name": "supabase-local-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "login": "supabase login",
+    "init": "supabase init && bin/setup.sh",
+    "start": "supabase db remote commit && supabase start",
+    "stop": "supabase stop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "supabase": "^1.37.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
