@@ -8,3 +8,12 @@
 1. run `npm run init`
 
 To run the server `npm run start|stop`. Requires docker running.
+
+## UPLAODING SCHEMA CHENGES
+
+1. `npx supabase db diff <name> -f <file-name>`
+2. `npm run push`
+
+## NOTES
+
+start script syncs schema changes from `remote` to `local`

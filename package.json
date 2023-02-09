@@ -8,6 +8,7 @@
     "init": "supabase init && bin/setup.sh",
     "start": "supabase db remote commit && supabase start",
     "stop": "supabase stop",
+    "push": "supabase db push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
