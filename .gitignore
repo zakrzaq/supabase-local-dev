@@ -2,3 +2,4 @@ node_modules/
 supabase/
 .env
 **/dump.*
+INFO.md
