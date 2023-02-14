@@ -12,7 +12,13 @@ if test -f "$ENV"; then
   # pg_restore -d postgresql://postgres:postgres@localhost:54322/postgres dumps/dump.psql
   # USING DOCKER POSTGRESS
   docker exec $SP_POSTGRESS_ID psql -U postgres -c "drop schema if exists public cascade"
-  docker exec $SP_POSTGRESS_ID pg_dump -U postgres -d $REMOTE_DB -n public -Fc | pg_restore -U postgres -d postgres
+  docker exec -it supabase_db_supabase-local-dev /bin/bash -c "pg_dump -U postgres -d ${REMOTE_DB} -n public -Fc | pg_restore -U postgres -d postgres"
+  echo 'Data dump complete'
+  docker exec -it supabase_db_supabase-local-dev find ./ -name 'dump.psql'
+  echo 'Data restore complete'
+
+  # docker exec -it supabase_db_supabase-local-dev /bin/bash -c "ls"
+  # pg_restore -U postgres -d postgres
 
 else
   echo "$ENV doesn't exist."
