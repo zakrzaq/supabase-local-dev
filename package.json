@@ -9,6 +9,8 @@
     "start": "supabase db remote commit && supabase start",
     "stop": "supabase stop",
     "push": "supabase db push",
+    "sync:local": "bin/download-remote-data.sh",
+    "sync:remote": "bin/upload-local-data.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
