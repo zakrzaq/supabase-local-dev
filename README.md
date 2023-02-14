@@ -18,11 +18,10 @@ To run the server `npm run start|stop`. Requires docker running.
 
 Start script syncs schema changes from `remote` to `local`
 
-## UPLOAD LOCAL DATA TO REMOTE
-
+## SYNC DATA TO LOCAL
 `npm run sync:local`
 
-## DOWNLAOD REMOTE DATA TO LOCAL
+##  DATA TO REMOTE
 
 `npm run sync:remote`
 
