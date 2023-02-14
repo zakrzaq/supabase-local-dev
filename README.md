@@ -14,6 +14,10 @@ To run the server `npm run start|stop`. Requires docker running.
 1. `npx supabase db diff <name> -f <file-name>`
 2. `npm run push`
 
+## DOWNLOADING SCHEMA changes
+
+Start script syncs schema changes from `remote` to `local`
+
 ## UPLOAD LOCAL DATA TO REMOTE
 
 `npm run sync:local`
@@ -24,12 +28,18 @@ To run the server `npm run start|stop`. Requires docker running.
 
 ## NOTES
 
-start script syncs schema changes from `remote` to `local`
+.env
+```bash
+DB_PASSWORD="<password>"
+PROJECT_ID="<project-id>" # can be find in SP url string
+TOKEN="<token>" # see link above
+REMOTE_DB="postgres://postgres:<remote-db-password>@db.<remote-project-id>.supabase.co:6543/postgres"%
+```
 
 ## TODO
 
 - [x] check downstrean / upstream data syncs
-- [ ] local dir for dumps
-- [ ] handle postgres 15 installed on local system
-- [ ] install postgress z docker compose ? asdf
+- [x] local dir for dumps
+- [x] handle postgres 15 installed on local system
+- [x] install postgress z docker compose ? asdf
 - [x] data structure 
