@@ -8,6 +8,7 @@
 1. run `npm run init`
 
 To run the server `npm run start|stop`. Requires docker running.
+Alternative `npx supabase start|stop`
 
 ## UPLAODING SCHEMA CHENGES
 
