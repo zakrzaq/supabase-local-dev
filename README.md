@@ -41,7 +41,7 @@ Start script syncs schema changes from `remote` to `local`
 DB_PASSWORD="<password>"
 PROJECT_ID="<project-id>" # can be find in SP url string
 TOKEN="<token>" # see link above
-REMOTE_DB="postgres://postgres:<remote-db-password>@db.<remote-project-id>.supabase.co:6543/postgres"%
+REMOTE_DB="postgres://postgres:<remote-db-password>@db.<remote-project-id>.supabase.co:6543/postgres"
 ```
 
 ## ISSUES
