@@ -5,7 +5,12 @@ if test -f "$ENV"; then
   echo "$ENV exists."
   [ -d dumps ] || mkdir dumps
   REMOTE_DB=$(grep REMOTE_DB .env | cut -d "=" -f2 | tr -d '"')
-  SP_POSTGRESS_ID=$(grep LOCAL_PG .env | cut -d "=" -f2 | tr -d '"')
+
+  current_dir=${PWD##*/}
+  docker_cont_name=supabase_db_${current_dir}
+  docker_cont_id=$(docker ps -q -f name=$docker_cont_name)
+  echo $docker_cont_id
+  SP_POSTGRESS_ID=$docker_cont_id
   
   # USING LOCAL POSTGRES
   # pg_dump postgresql://postgres:postgres@localhost:54322/postgres -n public -Fc > dumps/dump.psql 
