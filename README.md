@@ -45,6 +45,11 @@ TOKEN="<token>" # see link above
 REMOTE_DB="postgres://postgres:<remote-db-password>@db.<remote-project-id>.supabase.co:6543/postgres"%
 ```
 
+## ISSUES
+
+- [ ] migrations dont sync on first install
+- [ ] start stop commands
+
 ## TODO
 
 - [x] check downstrean / upstream data syncs
