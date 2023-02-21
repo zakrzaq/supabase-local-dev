@@ -3,19 +3,18 @@
 ## SETUP
 
 1. Add and edit `.env` with `DB_PASSWORD` and `PROJECT_ID`
-1. run `npm install`
-1. run `npm run login` and paste your access [token](https://app.supabase.com/account/tokens)
-1. run `npm run init`
-1. run `docker ps` and get container name (e.g. `supabase_db_zeppelins-be`) for `postgres-15`
-1. paste in `.env` under `LOCAL_PG` key
-1. edit you `.env`
    - DB_PASSWORD for remote DB
    - PROJECT_ID for your SB instance
    - access TOKEN we used earlier
    - postgres://postgres:`<DB_PASSWORD>`@`<PROJECT_ID>`.supabase.co:6543/postgres
+1. run `npm install`
+1. run `npm run login` and paste your access [token](https://app.supabase.com/account/tokens)
+1. run `npm run init`
+<!-- 1. run `docker ps` and get container name (e.g. `supabase_db_zeppelins-be`) for `postgres-15`
+1. paste in `.env` under `LOCAL_PG` key
+1. edit you `.env` -->
 
-To run the server `npm run start|stop`. Requires docker running.
-Alternative `npx supabase start|stop`
+To run the server `npx supabase start|stop`. Requires docker running.
 
 ## UPLAODING SCHEMA CHENGES
 
@@ -48,7 +47,8 @@ REMOTE_DB="postgres://postgres:<remote-db-password>@db.<remote-project-id>.supab
 ## ISSUES
 
 - [ ] migrations dont sync on first install
-- [ ] start stop commands
+- [x] address posgress container id issue
+- [x] start stop commands
 
 ## TODO
 
