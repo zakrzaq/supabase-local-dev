@@ -3,3 +3,5 @@ supabase/
 .env
 dumps/dump.*
 INFO.md
+
+test.*
